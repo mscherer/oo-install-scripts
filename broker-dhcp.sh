@@ -17,7 +17,7 @@ if [ -f $NSFILE ] ; then
 		echo PEERDNS=\"no\" >> $NSFILE
 	fi
 	if grep -q DNS1 $NSFILE ; then
-		sed -i "s/DNS1=.*/DNS1=${BROKERIP}" $NSFILE
+		sed -i "s/DNS1=.*/DNS1=${BROKERIP}/" $NSFILE
 	else
 		echo DNS1=${BROKERIP} >> $NSFILE
 	fi
